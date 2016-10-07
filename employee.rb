@@ -10,4 +10,7 @@ class Employee < Person
 		@hour*@rate
 	end
 	
+	def to_s
+		super + " earns €#{'%.0f' % week_rate} a week"
+	end
 end
