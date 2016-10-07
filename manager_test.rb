@@ -7,7 +7,9 @@ class ManagerTest < Test::Unit::TestCase
 		@h = 50
 		@r = 12
 		@b = 100
-		@m = Manager.new(@n,@h,@r,@b)
+		@pps = '1234567AB'
+		@p = Person.new(@n,@pps)
+		@m = Manager.new(@n,@pps,@h,@r,@b)
 	end
 
 	def test_week_rate
@@ -15,7 +17,6 @@ class ManagerTest < Test::Unit::TestCase
 	end
 
 	def test_manager_to_s
-		puts @m.to_s
-		assert(@m.to_s == "#{@m.name} earns €#{'%.0f' % @m.week_rate} a week, which includes a bonus of €#{@b}", "wtf")
+		assert(@m.to_s == "#{@p.to_s} earns €#{'%.0f' % @m.week_rate} a week, which includes a bonus of €#{@b}", "wtf")
 	end
 end

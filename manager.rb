@@ -1,7 +1,7 @@
 require_relative 'employee.rb'
 class Manager < Employee
-	def initialize(name, hour, rate, bonus)
-		super(name,hour,rate)
+	def initialize(name, pps, hour, rate, bonus)
+		super(name,pps,hour,rate)
 		@bonus = bonus.to_f
 	end
 

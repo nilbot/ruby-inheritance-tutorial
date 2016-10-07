@@ -1,7 +1,7 @@
 require_relative 'person.rb'
 class Employee < Person
-	def initialize(name, hour, rate)
-		super(name)
+	def initialize(name, pps, hour, rate)
+		super(name,pps)
 		@hour = hour.to_f
 		@rate = rate.to_f
 	end

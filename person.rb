@@ -1,10 +1,13 @@
 # person
 class Person
-	attr_reader :name
-	def initialize(name)
+	protected
+	attr_reader :name, :ppsn
+	public
+	def initialize(name, ppsn)
 		@name = name
+		@ppsn = ppsn
 	end
 	def to_s
-		@name
+		"#{@name} (PPS Number #{@ppsn})"
 	end
 end
