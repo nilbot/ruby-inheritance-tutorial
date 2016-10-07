@@ -11,4 +11,8 @@ class PersonTest < Test::Unit::TestCase
 	def test_initialize
 		assert(@p.name == @n,"wtf")
 	end
+
+	def test_to_s
+		assert(@p.to_s == @n,"wtf")
+	end
 end
