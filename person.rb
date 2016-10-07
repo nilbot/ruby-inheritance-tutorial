@@ -10,4 +10,8 @@ class Person
 	def to_s
 		"#{@name} (PPS Number #{@ppsn})"
 	end
+	include Comparable
+	def <=>(other)
+		self.ppsn <=> other.ppsn
+	end
 end
